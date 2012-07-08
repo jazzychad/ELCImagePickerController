@@ -47,14 +47,9 @@
     
 	overlayView.hidden = !overlayView.hidden;
     
-//    if([(ELCAssetTablePicker*)self.parent totalSelectedAssets] >= 10) {
-//        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Maximum Reached" message:@"" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
-//		[alert show];
-//		[alert release];	
-//
-//        [(ELCAssetTablePicker*)self.parent doneAction:nil];
-//    }
+    if (parent && [parent respondsToSelector:@selector(elcAsset:wasSelected:)]) {
+        [parent elcAsset:self wasSelected:(!overlayView.hidden)];
+    }
 }
 
 -(BOOL)selected {
@@ -75,4 +70,3 @@
 }
 
 @end
-

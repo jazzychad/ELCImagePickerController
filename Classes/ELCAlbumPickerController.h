@@ -19,6 +19,7 @@
 
 @property (nonatomic, assign) id parent;
 @property (nonatomic, retain) NSMutableArray *assetGroups;
+@property (nonatomic, assign) BOOL startPhotosAtBottom;
 
 -(void)selectedAssets:(NSArray*)_assets;
 
