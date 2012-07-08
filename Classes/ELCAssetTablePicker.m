@@ -62,7 +62,7 @@
     return ceil([self.assetGroup numberOfAssets] / 4.0);
 }
 
-- (NSIndexSet *)assetGroupIndexesForIndexpath:(NSIndexPath *)indexPath
+- (NSIndexSet *)assetGroupIndexesForIndexPath:(NSIndexPath *)indexPath
 {
     int index = (indexPath.row * 4);
 	int maxIndex = (indexPath.row * 4 + 3);
@@ -89,7 +89,7 @@
         return cachedRow;
     }
     
-    NSIndexSet *indexes = [self assetGroupIndexesForIndexpath:indexPath];
+    NSIndexSet *indexes = [self assetGroupIndexesForIndexPath:indexPath];
     
     NSMutableArray *assets = [NSMutableArray arrayWithCapacity:4];
     
